@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>83C47E4E-9743-4A5E-A23E-11B3618B6641</string>
+	<key>IDESourceControlProjectName</key>
+	<string>01_simpleCircle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>49B1C6B10427A89DCA797C61732BBFC9B7A5188F</key>
+		<string>https://github.com/tyhenry/TylerHenry_OFanimation2015.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>w01_h01_changeAtoB/01_simpleCircle.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>49B1C6B10427A89DCA797C61732BBFC9B7A5188F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tyhenry/TylerHenry_OFanimation2015.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>49B1C6B10427A89DCA797C61732BBFC9B7A5188F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>49B1C6B10427A89DCA797C61732BBFC9B7A5188F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TylerHenry_OFanimation2015</string>
+		</dict>
+	</array>
+</dict>
+</plist>
