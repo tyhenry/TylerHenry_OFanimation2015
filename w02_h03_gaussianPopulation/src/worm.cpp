@@ -52,7 +52,7 @@ void worm::update(){
             angle++;
         } else {
             angle--;
-        }s
+        }
     }
     
 }
