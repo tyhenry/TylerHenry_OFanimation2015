@@ -89,6 +89,12 @@ ofMesh ofApp::waveMesh(ofMesh _mesh){
     
     float time = ofGetElapsedTimef();
     
+    ofVec3f center;
+    center.set(ofGetWidth()/2,ofGetHeight()/2,0);
+    
+    ofVec3f mPos;
+    mPos.set(ofGetMouseX(),ofGetMouseY(),0);
+    
     for (int i=0; i<numVerts; ++i) {
         ofVec3f vert = _mesh.getVertex(i);
         
@@ -97,11 +103,14 @@ ofMesh ofApp::waveMesh(ofMesh _mesh){
         //set z value of vertex
         //vert.z = ofSignedNoise((vert.x + offset.x) * mult, (vert.y + offset.y) * mult) * 20.0;
         //vert.z = sin(ofGetElapsedTimef()*i*0.01)*20.0;
-        ofVec3f center;
-        center.set(ofGetWidth()/2,ofGetHeight()/2);
+
         ofVec3f delta = vert - center;
         float dist = sqrt(delta.x * delta.x + delta.y * delta.y);
-        vert.z = sin(time+dist)*20;
+        
+        ofVec3f delta2 = vert - mPos;
+        float dist2 = sqrt(delta2.x * delta2.x + delta2.y * delta2.y);
+        
+        vert.z = sin(time*(dist+dist2)*0.01)*20;
         
         _mesh.setVertex(i, vert);
         
