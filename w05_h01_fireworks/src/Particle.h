@@ -20,7 +20,8 @@ public:
     void draw();
     
     ofVec2f pos, vel, acc;
-    float lifespan, lifecount; //in frames
+    float lifespan, countdown; //in frames
+    bool dead;
     
-    float hue, radius;
+    float span, radius, hue;
 };

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F0078581AABE5100063116D /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0078561AABE5100063116D /* Particle.cpp */; };
-		2F00785B1AABE9600063116D /* Firework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F0078591AABE9600063116D /* Firework.cpp */; };
+		2F1138241AAF93B100BECE93 /* Explosion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1138221AAF93B100BECE93 /* Explosion.cpp */; };
+		2F1138281AAF9E9B00BECE93 /* Rocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F1138261AAF9E9B00BECE93 /* Rocket.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -63,8 +64,10 @@
 /* Begin PBXFileReference section */
 		2F0078561AABE5100063116D /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		2F0078571AABE5100063116D /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
-		2F0078591AABE9600063116D /* Firework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Firework.cpp; sourceTree = "<group>"; };
-		2F00785A1AABE9600063116D /* Firework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firework.h; sourceTree = "<group>"; };
+		2F1138221AAF93B100BECE93 /* Explosion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Explosion.cpp; sourceTree = "<group>"; };
+		2F1138231AAF93B100BECE93 /* Explosion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explosion.h; sourceTree = "<group>"; };
+		2F1138261AAF9E9B00BECE93 /* Rocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rocket.cpp; sourceTree = "<group>"; };
+		2F1138271AAF9E9B00BECE93 /* Rocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rocket.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -189,8 +192,10 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				2F0078591AABE9600063116D /* Firework.cpp */,
-				2F00785A1AABE9600063116D /* Firework.h */,
+				2F1138261AAF9E9B00BECE93 /* Rocket.cpp */,
+				2F1138271AAF9E9B00BECE93 /* Rocket.h */,
+				2F1138221AAF93B100BECE93 /* Explosion.cpp */,
+				2F1138231AAF93B100BECE93 /* Explosion.h */,
 				2F0078561AABE5100063116D /* Particle.cpp */,
 				2F0078571AABE5100063116D /* Particle.h */,
 			);
@@ -294,8 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				2F1138281AAF9E9B00BECE93 /* Rocket.cpp in Sources */,
+				2F1138241AAF93B100BECE93 /* Explosion.cpp in Sources */,
 				2F0078581AABE5100063116D /* Particle.cpp in Sources */,
-				2F00785B1AABE9600063116D /* Firework.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
