@@ -23,5 +23,5 @@ public:
     float lifespan, countdown, time; //in frames
     bool dead;
     
-    float span, radius, hue;
+    float span, radius, hue, rot;
 };

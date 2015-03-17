@@ -15,7 +15,7 @@ Rocket::Rocket(ofVec2f _vel, float _size, float _hue){
     size = _size;
     hue = _hue;
     
-    lifespan = 90; //3 sec @ 60 fps
+    lifespan = 90; //1.5 sec @ 60 fps
     countdown = lifespan;
     
     explode = false; //tracks whether explosion is ready

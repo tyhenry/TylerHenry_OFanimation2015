@@ -56,6 +56,7 @@ void Particle::update(){
     }
     
     
+    
     if (countdown > 0){
         countdown--;
     } else {
