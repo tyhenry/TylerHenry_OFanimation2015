@@ -17,7 +17,7 @@ public:
     void resetForces();
     void applyForce(ofVec2f force);
     void applyDampingForce(float damping);
-    void update(ofVec2f mousePos);
+    void update(ofVec2f handOnePos, ofVec2f handTwoPos);
     void draw();
     
     ofVec2f pos;

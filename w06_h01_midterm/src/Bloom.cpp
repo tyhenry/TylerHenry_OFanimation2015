@@ -41,10 +41,10 @@ void Bloom::applyDampingForce(float damping){
     }
 }
 
-void Bloom::update(ofVec2f mousePos){
+void Bloom::update(ofVec2f handOnePos, ofVec2f handTwoPos){
     //dead = true;
     for (int i=0; i<size; i++){
-        particles[i].update(mousePos, mousePos, pos);
+        particles[i].update(handOnePos, handTwoPos, pos);
         
         //if (!particles[i].dead) dead = false;
     }

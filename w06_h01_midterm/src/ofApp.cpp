@@ -164,17 +164,22 @@ void ofApp::update(){
     
     //SET PARTICLE ATTRACTION
     
+    ofVec2f mousePos;
+    mousePos.set(ofVec2f(ofGetMouseX(),ofGetMouseY()));
+    
     for (int i = 0; i < blooms.size(); i++) {
         for (int j = 0; j < blooms[i].particles.size(); j++){
         
             ofVec2f diff, diffOne, diffTwo;
             
             //GET DIFF FOR LEFT HAND (RIGHT SCREEN)
-            diffOne = handPosLeft - blooms[i].particles[j].pos;
+            diffOne = mousePos - blooms[i].particles[j].pos;
+            //diffOne = handPosLeft - blooms[i].particles[j].pos;
+            
 
             //GET DIFF FOR RIGHT HAND (RIGHT SCREEN)
-            
-            diffTwo = handPosRight - blooms[i].particles[j].pos;
+            diffTwo = mousePos - blooms[i].particles[j].pos;
+            //diffTwo = handPosRight - blooms[i].particles[j].pos;
             
             if (diffOne.length() <= diffTwo.length()){
                 diff = diffOne;
@@ -187,7 +192,7 @@ void ofApp::update(){
             float dist = diff.length();
             
             if (dist < 100) {
-                attraction.set(diff.getNormalized()* 0.1);
+                attraction.set(diff.getNormalized()* 0.2);
             }
             
             blooms[i].particles[j].resetForces();
@@ -205,9 +210,8 @@ void ofApp::update(){
         bloomPos.set(cycloid.trace[i].x,cycloid.trace[i].y);
         blooms[i].pos.set(bloomPos);
         
-        blooms[i].resetForces();
-        //blooms[i].applyForces(...); <--attraction/replusion
-        blooms[i].update(ofVec2f(ofGetMouseX(),ofGetMouseY()));
+        blooms[i].update(mousePos, mousePos);
+        //blooms[i].update(handPosLeft, handPosRight);
     }
 
 }

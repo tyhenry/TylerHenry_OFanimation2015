@@ -28,6 +28,8 @@ Particle::Particle(ofVec2f _pos, float _vel, float _radius, float _hue){
     
     dead = false;
     */
+    
+    timeOffset = ofRandom(10);
 
 }
 
@@ -84,9 +86,10 @@ void Particle::update(ofVec2f handOnePos, ofVec2f handTwoPos, ofVec2f oPos){
     */
     
     //move back
-    if ((diffOne.length() > 100) && (diffTwo.length() > 100)){
-        pos = 0.95*pos + 0.05*oPos;
-    }
+    //if ((diffOne.length() > 150) && (diffTwo.length() > 150)){
+        pos = 0.98*pos + 0.02*oPos;
+    //}
+    
 }
 
 void Particle::draw(){
@@ -96,8 +99,10 @@ void Particle::draw(){
     
     ofSetColor(255); //white
     
+    float posChange = sin(ofGetElapsedTimef()+timeOffset)*3;
+    
     ofPushMatrix();
-    ofTranslate(pos);
+    ofTranslate(pos.x+posChange, pos.y+posChange);
     ofRotate(rot);
     ofTriangle(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
     ofPopMatrix();
