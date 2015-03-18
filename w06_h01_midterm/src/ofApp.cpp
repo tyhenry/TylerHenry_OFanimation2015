@@ -6,6 +6,8 @@ void ofApp::setup(){
     //ofSetBackgroundAuto(false);
     ofBackground(0);
     
+    ofHideCursor();
+    
     center.set(ofGetWidth()/2, ofGetHeight()/2);
     
     //cycloid radii are backwards to make spiral
@@ -54,6 +56,10 @@ void ofApp::setup(){
     
     cout << kinect.width;
     cout << kinect.height;
+    
+    /*--PROJECTION MASK--*/
+    
+    //mask.loadImage("projectionmask.png");
 
     
 }
@@ -173,13 +179,13 @@ void ofApp::update(){
             ofVec2f diff, diffOne, diffTwo;
             
             //GET DIFF FOR LEFT HAND (RIGHT SCREEN)
-            diffOne = mousePos - blooms[i].particles[j].pos;
-            //diffOne = handPosLeft - blooms[i].particles[j].pos;
+            //diffOne = mousePos - blooms[i].particles[j].pos;
+            diffOne = handPosLeft - blooms[i].particles[j].pos;
             
 
             //GET DIFF FOR RIGHT HAND (RIGHT SCREEN)
-            diffTwo = mousePos - blooms[i].particles[j].pos;
-            //diffTwo = handPosRight - blooms[i].particles[j].pos;
+            //diffTwo = mousePos - blooms[i].particles[j].pos;
+            diffTwo = handPosRight - blooms[i].particles[j].pos;
             
             if (diffOne.length() <= diffTwo.length()){
                 diff = diffOne;
@@ -210,8 +216,8 @@ void ofApp::update(){
         bloomPos.set(cycloid.trace[i].x,cycloid.trace[i].y);
         blooms[i].pos.set(bloomPos);
         
-        blooms[i].update(mousePos, mousePos);
-        //blooms[i].update(handPosLeft, handPosRight);
+        //blooms[i].update(mousePos, mousePos);
+        blooms[i].update(handPosLeft, handPosRight);
     }
 
 }
@@ -233,6 +239,10 @@ void ofApp::draw(){
     for (int i=0; i<blooms.size(); i++){
         blooms[i].draw();
     }
+    
+    /*--PROJECTION MASK--*/
+    
+    //mask.draw(0,0);
 
 }
 

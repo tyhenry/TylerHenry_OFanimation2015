@@ -57,5 +57,9 @@ class ofApp : public ofBaseApp{
     
         Cycloid cycloid;
         vector<Bloom> blooms;
+    
+        /*--PROJECTION MASK--*/
+        
+        ofImage mask;
 		
 };
