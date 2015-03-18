@@ -182,13 +182,13 @@ void ofApp::update(){
             ofVec2f diff, diffOne, diffTwo;
             
             //GET DIFF FOR LEFT HAND (RIGHT SCREEN)
-            //diffOne = mousePos - blooms[i].particles[j].pos;
-            diffOne = handPosLeft - blooms[i].particles[j].pos;
+            diffOne = mousePos - blooms[i].particles[j].pos;
+            //diffOne = handPosLeft - blooms[i].particles[j].pos;
             
 
             //GET DIFF FOR RIGHT HAND (RIGHT SCREEN)
-            //diffTwo = mousePos - blooms[i].particles[j].pos;
-            diffTwo = handPosRight - blooms[i].particles[j].pos;
+            diffTwo = mousePos - blooms[i].particles[j].pos;
+            //diffTwo = handPosRight - blooms[i].particles[j].pos;
             
             if (diffOne.length() <= diffTwo.length()){
                 diff = diffOne;
@@ -219,8 +219,8 @@ void ofApp::update(){
         bloomPos.set(cycloid.trace[i].x,cycloid.trace[i].y);
         blooms[i].pos.set(bloomPos);
         
-        //blooms[i].update(mousePos, mousePos);
-        blooms[i].update(handPosLeft, handPosRight);
+        blooms[i].update(mousePos, mousePos);
+        //blooms[i].update(handPosLeft, handPosRight);
     }
 
 }
