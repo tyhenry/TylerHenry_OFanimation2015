@@ -7,19 +7,7 @@ void ofApp::setup(){
     ofBackground(0);
     
     ofHideCursor();
-    
-    center.set(ofGetWidth()/2, ofGetHeight()/2);
-    
-    //cycloid radii are backwards to make spiral
-    cycloid.setup(ofVec2f(ofGetWidth()/2, ofGetHeight()/2), 5.0, 170.0);
 
-    //initialize bloom vector
-    for (int i=0; i<cycloid.trace.size(); i++){
-        ofVec2f bloomPos;
-        bloomPos.set(cycloid.trace[i].x,cycloid.trace[i].y);
-        Bloom bloom(bloomPos, 10.0, 255);
-        blooms.push_back(bloom);
-    }
     
     /*-- KINECT + OPENCV --*/
     
@@ -30,7 +18,7 @@ void ofApp::setup(){
     //kinect.init(true); // shows infrared instead of RGB video image
     //kinect.init(false, false); // disable video image (faster fps)
     
-    kinect.open();		// opens first available kinect
+    kinect.open(0);		// opens first available kinect
     //kinect.open(1);	// open a kinect by id, starting with 0 (sorted by serial # lexicographically))
     //kinect.open("A00362A08602047A");	// open a kinect using it's unique serial #
     
@@ -60,6 +48,21 @@ void ofApp::setup(){
     /*--PROJECTION MASK--*/
     
     //mask.loadImage("projectionmask.png");
+    
+    //CYCLOID PARTICLES
+    
+    center.set(ofGetWidth()/2, ofGetHeight()/2);
+    
+    //cycloid radii are backwards to make spiral
+    cycloid.setup(ofVec2f(ofGetWidth()/2, ofGetHeight()/2), 5.0, 170.0);
+    
+    //initialize bloom vector
+    for (int i=0; i<cycloid.trace.size(); i++){
+        ofVec2f bloomPos;
+        bloomPos.set(cycloid.trace[i].x,cycloid.trace[i].y);
+        Bloom bloom(bloomPos, 10.0, 255);
+        blooms.push_back(bloom);
+    }
 
     
 }

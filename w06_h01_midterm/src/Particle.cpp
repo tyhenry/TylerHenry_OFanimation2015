@@ -99,10 +99,11 @@ void Particle::draw(){
     
     ofSetColor(255); //white
     
-    float posChange = sin(ofGetElapsedTimef()+timeOffset)*3;
+    float posXChange = sin(ofGetElapsedTimef()+timeOffset)*5;
+    float posYChange = cos(ofGetElapsedTimef()+timeOffset)*5;
     
     ofPushMatrix();
-    ofTranslate(pos.x+posChange, pos.y+posChange);
+    ofTranslate(pos.x+posXChange, pos.y+posYChange);
     ofRotate(rot);
     ofTriangle(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y);
     ofPopMatrix();
