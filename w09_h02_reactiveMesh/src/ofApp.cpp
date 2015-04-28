@@ -21,8 +21,8 @@ void ofApp::setup(){
     //SHAPES
     
     ofBackground(0);
-    icoSphere.setRadius(200);
-    origTriangles = icoSphere.getMesh().getUniqueFaces();
+    sphere.setRadius(200);
+    origTriangles = sphere.getMesh().getUniqueFaces();
     
     ofSetSmoothLighting(true);
     
@@ -72,9 +72,7 @@ void ofApp::update(){
     
     //SHAPES
     
-    //offset = ofMap(scaledVol,-1,1,0,300);
-    
-    triangles = icoSphere.getMesh().getUniqueFaces();
+    triangles = sphere.getMesh().getUniqueFaces();
     ofVec3f faceNormal;
     
     for (int i=0; i<triangles.size(); i++){
@@ -85,7 +83,7 @@ void ofApp::update(){
         }
     }
     
-    icoSphere.getMesh().setFromTriangles(triangles);
+    sphere.getMesh().setFromTriangles(triangles);
     
     float hue = ofMap(scaledVol, 0, 500.0, 170, 255);
     cout << hue << endl;
@@ -102,7 +100,7 @@ void ofApp::draw(){
     extLight.enable();
     
     cam.begin();
-    icoSphere.draw();
+    sphere.draw();
     cam.end();
     
     ofDisableLighting();

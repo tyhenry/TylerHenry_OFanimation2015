@@ -35,7 +35,7 @@ class ofApp : public ofBaseApp{
         //SHAPES
     
         ofEasyCam cam;
-        ofIcoSpherePrimitive icoSphere;
+        ofSpherePrimitive sphere;
         
         ofLight extLight;
         ofLight intLight;
