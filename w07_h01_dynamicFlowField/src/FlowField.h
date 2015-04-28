@@ -26,6 +26,7 @@ public:
     
     int width; //screen real-estate
     int height;
+    int depth;
     
     int internalWidth; //number of flow points
     int internalHeight;

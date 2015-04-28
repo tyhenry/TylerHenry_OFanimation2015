@@ -12,13 +12,13 @@
 class Particle {
 public:
     
-    void setup();
+    void setup(float depth);
     void resetForces();
-    void applyForce(ofVec2f force);
+    void applyForce(ofVec3f force);
     void applyDampingForce(float damp);
     void update();
     void draw();
     
-    ofVec2f pos, vel, acc;
+    ofVec3f pos, vel, acc;
     
 };

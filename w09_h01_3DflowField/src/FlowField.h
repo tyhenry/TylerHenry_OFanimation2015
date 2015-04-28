@@ -14,15 +14,15 @@ public:
     
     FlowField();
     
-    void setup(float w, float h, float res); //width, height, resolution
+    void setup(float w, float h, float d, float res); //width, height, resolution
     void followMouse(float mX, float mY);
     void setRandom(float scale);
     void setNoise();
-    ofVec2f getForceAt(float x, float y);
+    ofVec3f getForceAt(float x, float y, float z);
     
     void draw();
     
-    vector<ofVec2f> field;
+    vector<ofVec3f> field;
     
     int width; //screen real-estate
     int height;
@@ -33,6 +33,6 @@ public:
     int internalDepth;
     
     float resolution;
-    int fieldSize;
+    int fieldArea;
     
 };
