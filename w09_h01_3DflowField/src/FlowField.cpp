@@ -84,7 +84,7 @@ void FlowField::setRandom(float scale){
 
 }
 
-/*
+
 void FlowField::setNoise(){
  
     
@@ -98,26 +98,14 @@ void FlowField::setNoise(){
                 //define an angle based on noise
                 noise = ofMap(noise, 0, 1, 0, TWO_PI);
                 
-                field[index].set(ofVec3f(cos(noise)*2.0, sin(noise)*2.0),);
-
-                
-                diff = pointAt - pos;
-                ofVec3f norm = diff.normalize();
-                
-                float noise = ofNoise(x*0.05, y*0.05, z*0.05);
-                
-                rotX = atan2(norm.y, sqrt(1 - norm.y * norm.y));
-                rotY = atan2(diff.x, diff.z);
-                
-                rotX = ofRadToDeg(rotX);
-                rotY = ofRadToDeg(rotY);
+                field[index].set(cos(noise)*2.0, sin(noise)*2.0, sin(noise)*2.0);
                 
                 index++;
             }
         }
     }
 }
- */
+
 
 ofVec3f FlowField::getForceAt(float x, float y, float z){
     

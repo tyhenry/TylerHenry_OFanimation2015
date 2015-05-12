@@ -69,7 +69,7 @@ void ofApp::keyPressed(int key){
             drawField = !drawField;
             break;
         case 'n':
-            //flowField.setNoise();
+            flowField.setNoise();
             break;
         case 'r':
             flowField.setRandom(20.0);
